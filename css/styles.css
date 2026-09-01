@@ -240,6 +240,23 @@ p { margin: 0 0 16px; color: var(--color-ink-soft); }
   margin-top: 32px;
 }
 
+/* About */
+.about { padding: 90px 0; }
+
+.about h2 { max-width: 700px; }
+
+.about-text {
+  max-width: 640px;
+  font-size: 1.02rem;
+}
+
+.about-text p { margin-bottom: 20px; }
+
+.about-lead {
+  font-size: 1.2rem;
+  color: var(--color-ink);
+}
+
 /* Pillars */
 .pillars { padding: 90px 0; }
 
