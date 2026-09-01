@@ -377,6 +377,30 @@ p { margin: 0 0 16px; color: var(--color-ink-soft); }
 }
 .service-card.featured .service-link { color: var(--color-white); text-decoration: underline; }
 
+/* Plan */
+.plan { padding: 90px 0; }
+
+.plan-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.plan-step { border-top: 3px solid var(--color-sabiduria); padding-top: 20px; }
+
+.plan-number {
+  display: block;
+  font-weight: 900;
+  font-size: 2.2rem;
+  color: var(--color-sabiduria);
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.plan-step h3 { margin-bottom: 8px; }
+.plan-step p { margin-bottom: 0; font-size: 0.95rem; }
+
 /* Testimonials */
 .testimonials { padding: 90px 0; background: var(--color-cream-dark); }
 
@@ -546,6 +570,7 @@ p { margin: 0 0 16px; color: var(--color-ink-soft); }
 /* Responsive */
 @media (max-width: 900px) {
   .pillars-grid, .services-grid, .empathy-grid, .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+  .plan-grid { grid-template-columns: 1fr; }
   .contact-inner { grid-template-columns: 1fr; }
 }
 
