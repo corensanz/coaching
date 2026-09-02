@@ -11,7 +11,8 @@
   --color-white: #FFFFFF;
 
   --font-heading: 'League Spartan', sans-serif;
-  --font-body: 'Poppins', sans-serif;
+  --font-body: 'League Spartan', sans-serif;
+  --font-script: 'Kaushan Script', cursive;
 
   --radius: 18px;
   --container-width: 1140px;
@@ -56,6 +57,8 @@ h3 { font-size: 1.3rem; }
 p { margin: 0 0 16px; color: var(--color-ink-soft); }
 
 .script {
+  font-family: var(--font-script);
+  font-weight: 400;
   color: var(--color-sabiduria);
 }
 
@@ -160,10 +163,9 @@ p { margin: 0 0 16px; color: var(--color-ink-soft); }
 }
 
 .logo-tagline {
-  font-family: var(--font-body);
-  font-weight: 500;
+  font-family: var(--font-script);
   color: var(--color-sabiduria);
-  font-size: 0.85rem;
+  font-size: 1.1rem;
 }
 
 .site-nav {
@@ -382,11 +384,13 @@ p { margin: 0 0 16px; color: var(--color-ink-soft); }
 }
 
 .reflect-script {
-  font-family: var(--font-heading);
-  font-weight: 600;
+  font-family: var(--font-body);
+  color: var(--color-ink);
   margin: 40px 0 0;
-  font-size: 1.4rem;
+  font-size: 1.15rem;
 }
+
+.reflect-script .script { font-size: 1.3em; }
 
 /* Pillars */
 .pillars { padding: 90px 0; background: var(--color-white); }
@@ -591,8 +595,7 @@ p { margin: 0 0 16px; color: var(--color-ink-soft); }
 .carousel-slide.active { display: block; }
 
 .testimonial-featured-mark {
-  font-family: var(--font-heading);
-  font-weight: 800;
+  font-family: var(--font-script);
   font-size: 3rem;
   color: var(--color-cream);
   line-height: 0.5;
