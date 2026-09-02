@@ -425,32 +425,6 @@ p{ margin: 0 0 16px; color: var(--color-ink-soft); }
   .contact-grid{ grid-template-columns: 1fr; }
 }
 
-/* ---- image placeholders (hero / dark section) ---- */
-.image-slot{
-  width:100%;
-  height:100%;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  gap: 10px;
-  text-align:center;
-  padding: 24px;
-  background: var(--color-white);
-  border: 1.5px dashed var(--color-libertad);
-}
-.image-slot svg{ color: var(--color-sabiduria); }
-.image-slot span{ font-weight:700; color: var(--color-ink); font-size: 0.95rem; }
-.image-slot p{ margin:0; font-size: 0.82rem; color: var(--color-ink-soft); max-width: 26ch; }
-.image-slot-dark{
-  background: rgba(250,247,241,0.06);
-  border-color: rgba(250,247,241,0.35);
-  color: var(--color-dark-soft);
-}
-.image-slot-dark svg{ color: var(--color-autentica); }
-.image-slot-dark span{ color: var(--color-white); }
-.image-slot-dark p{ color: var(--color-dark-soft); }
-
 /* ---- final cta ---- */
 .final-cta{
   background: var(--color-dark);
@@ -521,11 +495,7 @@ footer a:hover{ color: var(--color-sabiduria); }
       </div>
       </div>
       <div class="hero-photo">
-        <div class="image-slot">
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/></svg>
-          <span>Imagen pendiente</span>
-          <p>Algo que transmita esa cabeza que no para — sin literalidad, sin nada clínico.</p>
-        </div>
+        <img src="images/hero-cabeza-que-no-para.jpg" alt="Mujer apoyando la cabeza en la mano, mirando por la ventana">
       </div>
     </div>
   </section>
@@ -574,11 +544,7 @@ footer a:hover{ color: var(--color-sabiduria); }
         </p>
       </div>
       <div class="dark-photo">
-        <div class="image-slot image-slot-dark">
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/></svg>
-          <span>Imagen pendiente</span>
-          <p>Algo que transmita alivio o validación — un gesto de soltar peso, no de nudo.</p>
-        </div>
+        <img src="images/manos-alivio.jpg" alt="Manos abiertas recibiendo la luz del sol">
       </div>
     </div>
   </section>
