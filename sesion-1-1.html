@@ -232,22 +232,49 @@ p{ margin: 0 0 16px; color: var(--color-ink-soft); }
 .identify{ padding: 64px 0; background: var(--color-cream-dark); }
 .identify .section-lead{ max-width: 60ch; margin-bottom: 8px; }
 .pains-list{
-  max-width: 68ch;
-  margin-top: 32px;
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 36px;
 }
 .pains-item{
-  margin: 0;
-  padding: 26px 0;
-  border-top: 1px solid rgba(42,39,24,0.14);
-  font-size: 1.15rem;
-  line-height: 1.55;
+  display:flex;
+  align-items:flex-start;
+  gap: 20px;
+  background: var(--color-white);
+  border-radius: 20px;
+  padding: 28px 30px;
+  box-shadow: 0 10px 24px -18px rgba(42,39,24,0.5);
+}
+.pains-number{
+  flex:none;
+  font-weight: 900;
+  font-size: 2.6rem;
+  line-height: 1;
+  color: var(--color-autentica);
+  -webkit-text-stroke: 1.5px var(--color-sabiduria);
+}
+.pains-item p{ margin:0; font-size: 1.08rem; line-height: 1.5; color: var(--color-ink); }
+.pains-item strong{ color: var(--color-sabiduria); font-weight: 700; }
+.pains-item.pains-closer{
+  grid-column: 1 / -1;
+  background: var(--color-autentica);
+  align-items:center;
+}
+.pains-item.pains-closer .pains-number{
+  color: var(--color-white);
+  -webkit-text-stroke: 1.5px var(--color-ink);
+}
+.pains-item.pains-closer p{
+  font-size: 1.35rem;
+  font-weight: 700;
   color: var(--color-ink);
 }
-.pains-list .pains-item:last-child{
-  border-bottom: 1px solid rgba(42,39,24,0.14);
-}
-@media (max-width: 640px){
-  .pains-item{ font-size: 1.05rem; padding: 20px 0; }
+@media (max-width: 720px){
+  .pains-list{ grid-template-columns: 1fr; }
+  .pains-item{ padding: 24px 22px; gap: 16px; }
+  .pains-number{ font-size: 2.1rem; }
+  .pains-item.pains-closer p{ font-size: 1.15rem; }
 }
 
 /* ---- dark section: validar la ansiedad ---- */
@@ -533,11 +560,26 @@ footer a:hover{ color: var(--color-sabiduria); }
       <h2>¿Te reconoces en algo de esto?</h2>
       <p class="section-lead">Así es como se nota la ansiedad y la carga mental en el día a día. No hace falta que te veas reflejada en todo — con una sola frase ya es momento de mirarlo.</p>
       <div class="pains-list">
-        <p class="pains-item">Te acuestas dándole vueltas al mismo problema y te levantas igual de cansada — como si la cabeza no se hubiera apagado en toda la noche.</p>
-        <p class="pains-item">Te machacas por no llegar a todo: en el trabajo, con tu familia, contigo. Y encima se te olvidan las llaves, una cita, el hilo de lo que ibas a decir.</p>
-        <p class="pains-item">No consigues desconectar ni el fin de semana. El cuello, los hombros, la mandíbula — todo apretado, y ni te habías dado cuenta.</p>
-        <p class="pains-item">Dices que sí aunque por dentro estés diciendo que no, para no generar ni un conflicto más. Y luego saltas con quien menos se lo merece, porque ya no te queda paciencia.</p>
-        <p class="pains-item">Sientes que el tiempo nunca te alcanza, hagas lo que hagas.</p>
+        <div class="pains-item">
+          <span class="pains-number">01</span>
+          <p>Te acuestas dándole vueltas al mismo problema y te levantas igual de cansada — como si <strong>la cabeza no se hubiera apagado</strong> en toda la noche.</p>
+        </div>
+        <div class="pains-item">
+          <span class="pains-number">02</span>
+          <p>Te machacas por no llegar a todo: en el trabajo, con tu familia, contigo. Y encima <strong>se te olvidan las llaves, una cita</strong>, el hilo de lo que ibas a decir.</p>
+        </div>
+        <div class="pains-item">
+          <span class="pains-number">03</span>
+          <p>No consigues desconectar ni el fin de semana. <strong>Cuello, hombros, mandíbula</strong> — todo apretado, y ni te habías dado cuenta.</p>
+        </div>
+        <div class="pains-item">
+          <span class="pains-number">04</span>
+          <p>Dices que sí aunque por dentro digas que no, para no generar ni un conflicto más. Y luego <strong>saltas con quien menos se lo merece</strong>, porque ya no te queda paciencia.</p>
+        </div>
+        <div class="pains-item pains-closer">
+          <span class="pains-number">05</span>
+          <p>Sientes que el tiempo nunca te alcanza, hagas lo que hagas.</p>
+        </div>
       </div>
     </div>
   </section>
