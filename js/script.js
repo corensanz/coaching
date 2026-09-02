@@ -17,6 +17,31 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  var slides = document.querySelectorAll('.carousel-slide');
+  var dots = document.querySelectorAll('.dot');
+  var prevBtn = document.querySelector('.carousel-prev');
+  var nextBtn = document.querySelector('.carousel-next');
+
+  if (slides.length) {
+    var current = 0;
+
+    var showSlide = function (index) {
+      current = (index + slides.length) % slides.length;
+      slides.forEach(function (slide, i) {
+        slide.classList.toggle('active', i === current);
+      });
+      dots.forEach(function (dot, i) {
+        dot.classList.toggle('active', i === current);
+      });
+    };
+
+    prevBtn.addEventListener('click', function () { showSlide(current - 1); });
+    nextBtn.addEventListener('click', function () { showSlide(current + 1); });
+    dots.forEach(function (dot, i) {
+      dot.addEventListener('click', function () { showSlide(i); });
+    });
+  }
+
   var WHATSAPP_NUMBER = '34650570487';
   var form = document.getElementById('contact-form');
   var note = document.getElementById('form-note');
