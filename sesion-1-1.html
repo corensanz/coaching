@@ -329,47 +329,6 @@ p{ margin: 0 0 16px; color: var(--color-ink-soft); }
   .discovery-features{ grid-template-columns: 1fr; }
 }
 
-/* ---- facts ---- */
-.facts{ padding: 8px 0 64px; }
-.facts-card{
-  background: var(--color-white);
-  border: 1px solid var(--color-cream-dark);
-  border-radius: 20px;
-  padding: 8px 32px;
-}
-.fact-row{
-  display:grid;
-  grid-template-columns: 160px 1fr;
-  gap: 20px;
-  padding: 22px 0;
-  border-bottom: 1px solid var(--color-cream-dark);
-  align-items: baseline;
-}
-.fact-row:last-child{ border-bottom: none; }
-.fact-label{
-  font-weight: 600;
-  font-size: 0.82rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--color-libertad);
-}
-.fact-value{
-  font-size: 1.08rem;
-  color: var(--color-ink);
-  margin: 0;
-}
-.fact-value strong{ font-weight: 700; }
-.fact-note{
-  display:block;
-  font-size: 0.94rem;
-  font-weight: 400;
-  color: var(--color-ink-soft);
-  margin-top: 4px;
-}
-@media (max-width: 560px){
-  .fact-row{ grid-template-columns: 1fr; gap: 4px; }
-}
-
 /* ---- narrative ---- */
 .narrative{ padding: 8px 0 64px; }
 .narrative .lead{
@@ -674,6 +633,35 @@ footer a:hover{ color: var(--color-sabiduria); }
     </div>
   </section>
 
+  <section class="narrative">
+    <div class="container-wide narrative-grid">
+      <div class="narrative-photo">
+        <img src="images/carmen-sobre-mi.png" alt="Carmen Orensanz sonriendo">
+      </div>
+      <div>
+      <p class="eyebrow">Cómo es, de verdad</p>
+      <h2>Así es hablar conmigo</h2>
+      <p class="lead">
+        Nos conectamos y empezamos por donde tú estés: una frase suelta,
+        un peso en el pecho, algo que llevas meses sin decir en voz
+        alta. No traigo un cuestionario clínico ni un diagnóstico. Traigo
+        preguntas que van al hueso, silencio cuando hace falta, y un
+        ejercicio práctico para poner forma a lo que sientes.
+      </p>
+      <p>
+        A veces te voy a alentar, a veces te voy a confrontar, a veces nos
+        vamos a reír — pero siempre desde la misma empatía. Al colgar,
+        algo se ha movido. No siempre es cómodo. Casi siempre es alivio.
+      </p>
+      <p>
+        Esto es para ti si ya sabes que cargas con demasiado y estás
+        cansada de sostenerlo sola. No hace falta que sepas por dónde
+        empezar. Para eso está esta primera sesión.
+      </p>
+      </div>
+    </div>
+  </section>
+
   <section class="discovery" id="sesion-gratuita">
     <div class="container-wide">
       <div class="discovery-card">
@@ -704,62 +692,6 @@ footer a:hover{ color: var(--color-sabiduria); }
             Quiero mi sesión gratuita
           </a>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="facts" id="facts">
-    <div class="container">
-      <p class="eyebrow">Si decides seguir</p>
-      <div class="facts-card">
-        <div class="fact-row">
-          <span class="fact-label">Duración</span>
-          <p class="fact-value"><strong>60 minutos</strong> por sesión.</p>
-        </div>
-        <div class="fact-row">
-          <span class="fact-label">Inversión</span>
-          <p class="fact-value"><strong>60€</strong> la sesión suelta, después de tu sesión gratuita.</p>
-        </div>
-        <div class="fact-row">
-          <span class="fact-label">Modalidad</span>
-          <p class="fact-value">Online, por videollamada — o <strong>presencial en Zaragoza</strong> si te viene mejor.</p>
-        </div>
-        <div class="fact-row">
-          <span class="fact-label">Ritmo</span>
-          <p class="fact-value">
-            Nada de paquetes cerrados.
-            <span class="fact-note">Decidimos juntas la frecuencia y la duración del proceso según lo que estés atravesando — cada proceso lleva su tiempo.</span>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="narrative">
-    <div class="container-wide narrative-grid">
-      <div class="narrative-photo">
-        <img src="images/carmen-sobre-mi.png" alt="Carmen Orensanz sonriendo">
-      </div>
-      <div>
-      <p class="eyebrow">Cómo es, de verdad</p>
-      <h2>Qué pasa en esa primera llamada</h2>
-      <p class="lead">
-        Nos conectamos y empezamos por donde tú estés: una frase suelta,
-        un peso en el pecho, algo que llevas meses sin decir en voz
-        alta. No traigo un cuestionario clínico ni un diagnóstico. Traigo
-        preguntas que van al hueso, silencio cuando hace falta, y un
-        ejercicio práctico para poner forma a lo que sientes.
-      </p>
-      <p>
-        A veces te voy a alentar, a veces te voy a confrontar, a veces nos
-        vamos a reír — pero siempre desde la misma empatía. Al colgar,
-        algo se ha movido. No siempre es cómodo. Casi siempre es alivio.
-      </p>
-      <p>
-        Esto es para ti si ya sabes que cargas con demasiado y estás
-        cansada de sostenerlo sola. No hace falta que sepas por dónde
-        empezar. Para eso está esta primera sesión.
-      </p>
       </div>
     </div>
   </section>
