@@ -368,22 +368,13 @@ p{ margin: 0 0 16px; color: var(--color-ink-soft); }
   gap: 24px;
 }
 .video-slot{
-  background: var(--color-white);
-  border: 1.5px dashed var(--color-libertad);
+  width:100%;
+  background: var(--color-ink);
   border-radius: 16px;
   aspect-ratio: 9/16;
   max-height: 420px;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  gap: 10px;
-  padding: 24px;
+  object-fit: cover;
 }
-.video-slot svg{ color: var(--color-sabiduria); }
-.video-slot p{ margin:0; font-size: 0.85rem; color: var(--color-ink-soft); }
-.video-slot span{ font-weight:700; color: var(--color-ink); font-size:0.95rem; }
 @media (max-width: 640px){
   .video-testimonials{ grid-template-columns: 1fr; }
 }
@@ -679,23 +670,13 @@ footer a:hover{ color: var(--color-sabiduria); }
         </blockquote>
       </div>
 
-      <!--
-        PENDIENTE: Carmen tiene 2 vídeos testimonio para subir aquí.
-        En cuanto me pases los archivos (o los enlaces), sustituyo estos
-        placeholders por <video controls poster="..."><source src="videos/testimonio-1.mp4"></video>
-        o por el embed que corresponda (YouTube/Vimeo/Instagram).
-      -->
       <div class="video-testimonials">
-        <div class="video-slot">
-          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="15" height="14" rx="2"/><path d="m17 10 5-3v10l-5-3"/></svg>
-          <span>Vídeo testimonio 1</span>
-          <p>Pendiente de subir</p>
-        </div>
-        <div class="video-slot">
-          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="15" height="14" rx="2"/><path d="m17 10 5-3v10l-5-3"/></svg>
-          <span>Vídeo testimonio 2</span>
-          <p>Pendiente de subir</p>
-        </div>
+        <video class="video-slot" controls playsinline preload="metadata" poster="videos/testimonio-1-poster.jpg">
+          <source src="videos/testimonio-1.mp4" type="video/mp4">
+        </video>
+        <video class="video-slot" controls playsinline preload="metadata" poster="videos/testimonio-2-poster.jpg">
+          <source src="videos/testimonio-2.mp4" type="video/mp4">
+        </video>
       </div>
     </div>
   </section>
