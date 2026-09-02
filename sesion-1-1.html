@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sesiones 1:1 con Carmen Orensanz</title>
+<title>Sesión gratuita de descubrimiento 1:1 con Carmen Orensanz</title>
+<meta name="description" content="Coaching individual para la ansiedad y la carga mental. Reserva una sesión gratuita de descubrimiento de 45-60 minutos con Carmen Orensanz.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700;800;900&family=Kaushan+Script&display=swap" rel="stylesheet">
@@ -19,6 +20,8 @@
   --color-ink:#2A2718;
   --color-ink-soft:#5C5640;
   --color-white:#FFFFFF;
+  --color-dark:#3F4A34;
+  --color-dark-soft:#F4EFE2;
 
   --font-heading:'League Spartan', sans-serif;
   --font-script:'Kaushan Script', cursive;
@@ -49,7 +52,7 @@ a{ color:inherit; text-decoration:none; }
   padding: 0 24px;
 }
 .container-wide{
-  max-width: 920px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -64,6 +67,7 @@ h1,h2,h3{
 }
 h1{ font-size: clamp(2.1rem, 5vw, 3.4rem); font-weight: 900; line-height: 1.1; }
 h2{ font-size: clamp(1.5rem, 3vw, 2.1rem); }
+h3{ font-size: 1.15rem; margin-bottom: 10px; }
 
 p{ margin: 0 0 16px; color: var(--color-ink-soft); }
 
@@ -85,6 +89,9 @@ p{ margin: 0 0 16px; color: var(--color-ink-soft); }
   color: var(--color-sabiduria);
   margin-bottom: 14px;
 }
+.eyebrow-light{ color: var(--color-autentica); }
+
+.text-center{ text-align: center; }
 
 /* ---- hero grid & photo ---- */
 .hero-grid{
@@ -203,6 +210,7 @@ p{ margin: 0 0 16px; color: var(--color-ink-soft); }
   border: 1.5px solid transparent;
   cursor:pointer;
   transition: background .15s ease, color .15s ease, border-color .15s ease;
+  font-family: var(--font-heading);
 }
 .btn-primary{ background: var(--color-autentica); color: var(--color-ink); }
 .btn-primary:hover{ background: var(--color-sabiduria); color: var(--color-white); }
@@ -213,6 +221,103 @@ p{ margin: 0 0 16px; color: var(--color-ink-soft); }
   color: var(--color-ink);
 }
 .btn-ghost:hover{ background: var(--color-cream-dark); }
+.btn-ghost-light{
+  border-color: rgba(250,247,241,0.5);
+  color: var(--color-white);
+}
+.btn-ghost-light:hover{ background: rgba(250,247,241,0.12); }
+.btn-full{ width: 100%; justify-content: center; }
+
+/* ---- identifica (3 nudos) ---- */
+.identify{ padding: 64px 0; }
+.identify .section-lead{ max-width: 60ch; margin-bottom: 40px; }
+.identify-grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.identify-card{
+  background: var(--color-white);
+  border: 1px solid var(--color-cream-dark);
+  border-radius: 18px;
+  padding: 30px 26px;
+}
+.identify-check{
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--color-cream-dark);
+  color: var(--color-libertad);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom: 18px;
+}
+.identify-card p{ font-size: 0.96rem; margin: 0; }
+.identify-card strong{ color: var(--color-ink); font-weight: 700; }
+@media (max-width: 820px){
+  .identify-grid{ grid-template-columns: 1fr; }
+}
+
+/* ---- dark nudo section ---- */
+.dark-section{
+  background: var(--color-dark);
+  color: var(--color-dark-soft);
+  padding: 72px 0;
+}
+.dark-grid{
+  display:grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items:center;
+}
+.dark-section h2{
+  color: var(--color-white);
+  font-style: italic;
+  font-weight: 800;
+}
+.dark-section p{ color: var(--color-dark-soft); }
+.dark-photo{
+  border-radius: 20px;
+  overflow: hidden;
+  aspect-ratio: 4/5;
+  border: 3px solid rgba(250,247,241,0.15);
+}
+.dark-photo img{ width:100%; height:100%; object-fit:cover; }
+@media (max-width: 820px){
+  .dark-grid{ grid-template-columns: 1fr; }
+  .dark-photo{ max-width: 320px; margin: 0 auto; }
+}
+
+/* ---- sesión gratuita (discovery) ---- */
+.discovery{
+  padding: 72px 0;
+}
+.discovery-card{
+  background: var(--color-white);
+  border: 2px solid var(--color-autentica);
+  border-radius: 24px;
+  padding: 44px;
+}
+.discovery-card .section-lead{ max-width: 62ch; }
+.discovery-features{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 32px 0 8px;
+}
+.discovery-feature{
+  display:flex;
+  gap: 14px;
+  align-items:flex-start;
+}
+.discovery-feature svg{ flex:none; margin-top: 3px; color: var(--color-sabiduria); }
+.discovery-feature p{ margin:0; font-size: 0.95rem; color: var(--color-ink); }
+.discovery-actions{ margin-top: 28px; }
+@media (max-width: 820px){
+  .discovery-card{ padding: 30px 24px; }
+  .discovery-features{ grid-template-columns: 1fr; }
+}
 
 /* ---- facts ---- */
 .facts{ padding: 8px 0 64px; }
@@ -303,33 +408,113 @@ p{ margin: 0 0 16px; color: var(--color-ink-soft); }
   .testimonials-grid{ grid-template-columns: 1fr; }
 }
 
-/* ---- contact ---- */
-.contact{
-  padding: 72px 0 56px;
-  text-align: center;
+.video-testimonials{
+  margin-top: 32px;
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
 }
-.contact h2{ margin-bottom: 10px; }
-.contact .section-lead{
-  max-width: 46ch;
-  margin: 0 auto 32px;
-}
-.contact-links{
+.video-slot{
+  background: var(--color-white);
+  border: 1.5px dashed var(--color-libertad);
+  border-radius: 16px;
+  aspect-ratio: 9/16;
+  max-height: 420px;
   display:flex;
+  flex-direction:column;
+  align-items:center;
   justify-content:center;
-  gap: 14px;
-  flex-wrap: wrap;
-  margin-bottom: 40px;
+  text-align:center;
+  gap: 10px;
+  padding: 24px;
 }
-.contact-email{
-  font-size: 0.95rem;
+.video-slot svg{ color: var(--color-sabiduria); }
+.video-slot p{ margin:0; font-size: 0.85rem; color: var(--color-ink-soft); }
+.video-slot span{ font-weight:700; color: var(--color-ink); font-size:0.95rem; }
+@media (max-width: 640px){
+  .video-testimonials{ grid-template-columns: 1fr; }
+}
+
+/* ---- contact ---- */
+.contact{ padding: 72px 0; }
+.contact h2{ margin-bottom: 10px; }
+.contact-grid{
+  display:grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 48px;
+  align-items:flex-start;
+}
+.contact-info .section-lead{ max-width: 42ch; }
+.contact-links{
+  list-style:none;
+  margin: 24px 0 0;
+  padding:0;
+  display:flex;
+  flex-direction:column;
+  gap: 14px;
+}
+.contact-links a{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  font-weight:600;
+  color: var(--color-ink);
+}
+.contact-links a:hover{ color: var(--color-sabiduria); }
+.contact-form{
+  background: var(--color-cream-dark);
+  border-radius: 20px;
+  padding: 32px;
+}
+.form-row{ margin-bottom: 18px; }
+.form-row label{
+  display:block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 6px;
   color: var(--color-ink-soft);
 }
-.contact-email a{
+.form-row input,
+.form-row select,
+.form-row textarea{
+  width:100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1.5px solid rgba(42,39,24,0.15);
+  background: var(--color-white);
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
   color: var(--color-ink);
-  font-weight: 600;
-  border-bottom: 1px solid var(--color-sabiduria);
 }
-.contact-email a:hover{ color: var(--color-sabiduria); }
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus{
+  outline:none;
+  border-color: var(--color-sabiduria);
+}
+.form-note{
+  font-size: 0.78rem;
+  color: var(--color-ink-soft);
+  margin: 10px 0 0;
+}
+@media (max-width: 820px){
+  .contact-grid{ grid-template-columns: 1fr; }
+  .contact-form{ padding: 24px; }
+}
+
+/* ---- final cta ---- */
+.final-cta{
+  background: var(--color-dark);
+  color: var(--color-dark-soft);
+  padding: 64px 0;
+  text-align: center;
+}
+.final-cta h2{
+  color: var(--color-white);
+  max-width: 22ch;
+  margin: 0 auto 26px;
+}
+.final-cta .btn{ margin-top: 4px; }
 
 /* ---- footer ---- */
 footer{
@@ -369,30 +554,118 @@ footer a:hover{ color: var(--color-sabiduria); }
     </svg>
     <div class="container-wide hero-grid">
       <div class="hero-inner">
-      <p class="eyebrow">Coaching individual · 1:1</p>
-      <h1>Una hora entera para<br><span class="script">deshacer el nudo.</span></h1>
+      <p class="eyebrow">Coaching individual · Ansiedad y carga mental</p>
+      <h1>Llevas tantos nudos en la cabeza<br>que ya ni <span class="script">notas el peso.</span></h1>
       <p class="hero-lead">
-        Nada de fórmulas ni de guiones de manual. En cada sesión de 60
-        minutos vamos directas al hueso de lo que te tiene atrapada —
-        online o en persona en Zaragoza, al ritmo que tú necesites.
+        Rumias lo mismo durante horas, te acuestas cansada y te levantas
+        igual, y dices que sí a todo aunque por dentro estés pidiendo un
+        descanso. Eso tiene nombre: carga mental. En una sesión gratuita de
+        45–60 minutos la ponemos sobre la mesa y te llevas una primera
+        herramienta para empezar a soltarla.
       </p>
       <div class="hero-actions">
-        <a class="btn btn-whatsapp" href="https://wa.me/34650570487?text=Hola%20Carmen%2C%20quiero%20saber%20m%C3%A1s%20sobre%20las%20sesiones%201%3A1" target="_blank" rel="noopener">
+        <a class="btn btn-whatsapp" href="https://wa.me/34650570487?text=Hola%20Carmen%2C%20quiero%20reservar%20mi%20sesi%C3%B3n%20gratuita%20de%20descubrimiento" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-.9-.3-.1-.5-.2-.7.1-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-2-1.8-2.3-.2-.3 0-.5.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5C9.4 9 8.9 7.7 8.7 7.2c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2.1 3.2 5 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.3-.6-.4z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.4 5.1L2 22l5.1-1.3C8.5 21.5 10.2 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.2.8.8-3.1-.2-.3C4 14.7 3.5 13.4 3.5 12c0-4.7 3.8-8.5 8.5-8.5s8.5 3.8 8.5 8.5-3.8 8.5-8.5 8.5z"/></svg>
-          Escríbeme por WhatsApp
+          Reserva tu sesión gratuita
         </a>
-        <a class="btn btn-ghost" href="#facts">Ver duración, precio y modalidad ↓</a>
+        <a class="btn btn-ghost" href="#identifica">¿Te reconoces en esto? ↓</a>
       </div>
       </div>
       <div class="hero-photo">
+        <img src="images/carmen-sobre-mi.png" alt="Carmen Orensanz sonriendo">
+      </div>
+    </div>
+  </section>
+
+  <section class="identify" id="identifica">
+    <div class="container-wide">
+      <p class="eyebrow">Empieza por aquí</p>
+      <h2>¿Te reconoces en alguno de estos tres nudos?</h2>
+      <p class="section-lead">No hace falta que te identifiques con los tres. Con uno solo ya es momento de empezar a mirarlo.</p>
+      <div class="identify-grid">
+        <div class="identify-card">
+          <span class="identify-check">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          </span>
+          <h3>Tu cabeza no para</h3>
+          <p>Le das mil vueltas al mismo problema sin encontrar la salida y, encima, te machacas por no estar rindiendo lo suficiente. <strong>La autocrítica se ha vuelto feroz</strong> y el diálogo interno, agotador.</p>
+        </div>
+        <div class="identify-card">
+          <span class="identify-check">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          </span>
+          <h3>Vives con la agenda mental siempre abierta</h3>
+          <p>Se te olvidan cosas, te cuesta desconectar hasta los fines de semana, y notas que <strong>el tiempo nunca te alcanza</strong>, por mucho que corras.</p>
+        </div>
+        <div class="identify-card">
+          <span class="identify-check">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          </span>
+          <h3>Dices que sí aunque por dentro digas que no</h3>
+          <p>Evitas el conflicto a toda costa, cargas con lo de los demás para que nadie se moleste, y <strong>siempre acabas la última en tu propia lista.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark-section">
+    <div class="container-wide dark-grid">
+      <div>
+        <p class="eyebrow eyebrow-light">Sobre la carga mental</p>
+        <h2>La carga mental también es un nudo. Y los nudos se pueden deshacer.</h2>
+        <p>
+          No es que seas débil ni que "no sepas organizarte". Es que llevas
+          demasiado tiempo siendo tú quien sostiene, recuerda y anticipa
+          todo, para todos — y a ti, ¿quién te sostiene?
+        </p>
+        <p>
+          El primer paso no es hacer más. Es parar un momento y mirar de
+          qué está hecho ese nudo.
+        </p>
+      </div>
+      <div class="dark-photo">
         <img src="images/carmen-hero.jpg" alt="Carmen Orensanz deshaciendo un nudo con las manos">
+      </div>
+    </div>
+  </section>
+
+  <section class="discovery" id="sesion-gratuita">
+    <div class="container-wide">
+      <div class="discovery-card">
+        <p class="eyebrow">Tu primer paso, sin coste</p>
+        <h2>Empecemos con una sesión gratuita de descubrimiento</h2>
+        <p class="section-lead">
+          Una videollamada de 45–60 minutos, solo para ti. Nada de venta,
+          nada de compromiso: miramos juntas qué hay detrás de esa
+          ansiedad y esa carga, y sales con algo concreto en las manos.
+        </p>
+        <div class="discovery-features">
+          <div class="discovery-feature">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            <p>45–60 minutos por videollamada, al ritmo que necesites — sin prisa y sin juicio.</p>
+          </div>
+          <div class="discovery-feature">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="0.5" fill="currentColor"/></svg>
+            <p>Te llevas un <strong>ejercicio práctico</strong>: ves con claridad dónde se te va la energía, detectas por dónde empezar sin agobiarte, y esbozas un primer objetivo concreto.</p>
+          </div>
+          <div class="discovery-feature">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+            <p>Decides tú si quieres seguir. Sin ningún tipo de presión ni permanencia.</p>
+          </div>
+        </div>
+        <div class="discovery-actions">
+          <a class="btn btn-whatsapp" href="https://wa.me/34650570487?text=Hola%20Carmen%2C%20quiero%20reservar%20mi%20sesi%C3%B3n%20gratuita%20de%20descubrimiento" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-.9-.3-.1-.5-.2-.7.1-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-2-1.8-2.3-.2-.3 0-.5.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5C9.4 9 8.9 7.7 8.7 7.2c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2.1 3.2 5 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.3-.6-.4z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.4 5.1L2 22l5.1-1.3C8.5 21.5 10.2 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.2.8.8-3.1-.2-.3C4 14.7 3.5 13.4 3.5 12c0-4.7 3.8-8.5 8.5-8.5s8.5 3.8 8.5 8.5-3.8 8.5-8.5 8.5z"/></svg>
+            Quiero mi sesión gratuita
+          </a>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="facts" id="facts">
     <div class="container">
-      <p class="eyebrow">La sesión, en claro</p>
+      <p class="eyebrow">Si decides seguir</p>
       <div class="facts-card">
         <div class="fact-row">
           <span class="fact-label">Duración</span>
@@ -400,7 +673,7 @@ footer a:hover{ color: var(--color-sabiduria); }
         </div>
         <div class="fact-row">
           <span class="fact-label">Inversión</span>
-          <p class="fact-value"><strong>60€</strong> la sesión suelta.</p>
+          <p class="fact-value"><strong>60€</strong> la sesión suelta, después de tu sesión gratuita.</p>
         </div>
         <div class="fact-row">
           <span class="fact-label">Modalidad</span>
@@ -424,25 +697,23 @@ footer a:hover{ color: var(--color-sabiduria); }
       </div>
       <div>
       <p class="eyebrow">Cómo es, de verdad</p>
-      <h2>Qué pasa en esa hora</h2>
+      <h2>Qué pasa en esa primera llamada</h2>
       <p class="lead">
-        Nos sentamos —en pantalla o cara a cara— y empezamos por donde tú
-        estés: una frase suelta, un nudo en el estómago, algo que llevas
-        meses evitando decir en voz alta. No traigo un cuestionario. Traigo
-        preguntas que van al hueso, silencio cuando hace falta, y la misma
-        franqueza que uso conmigo misma.
+        Nos conectamos y empezamos por donde tú estés: una frase suelta,
+        un nudo en el estómago, algo que llevas meses sin decir en voz
+        alta. No traigo un cuestionario clínico ni un diagnóstico. Traigo
+        preguntas que van al hueso, silencio cuando hace falta, y un
+        ejercicio práctico para poner forma a lo que sientes.
       </p>
       <p>
         A veces te voy a alentar, a veces te voy a confrontar, a veces nos
-        vamos a reír — pero siempre desde la misma empatía. Al terminar la
-        hora, algo se ha movido. No siempre es cómodo. Casi siempre es
-        alivio.
+        vamos a reír — pero siempre desde la misma empatía. Al colgar,
+        algo se ha movido. No siempre es cómodo. Casi siempre es alivio.
       </p>
       <p>
-        Esto es para ti si ya sabes que hay algo que no te convence —una
-        relación, un trabajo, una forma de tratarte— y estás cansada de
-        dar vueltas sola. No hace falta que sepas por dónde empezar. Para
-        eso estoy yo.
+        Esto es para ti si ya sabes que cargas con demasiado y estás
+        cansada de sostenerlo sola. No hace falta que sepas por dónde
+        empezar. Para eso está esta primera sesión.
       </p>
       </div>
     </div>
@@ -469,24 +740,98 @@ footer a:hover{ color: var(--color-sabiduria); }
           <cite class="testimonial-author">— Manuela V.</cite>
         </blockquote>
       </div>
+
+      <!--
+        PENDIENTE: Carmen tiene 2 vídeos testimonio para subir aquí.
+        En cuanto me pases los archivos (o los enlaces), sustituyo estos
+        placeholders por <video controls poster="..."><source src="videos/testimonio-1.mp4"></video>
+        o por el embed que corresponda (YouTube/Vimeo/Instagram).
+      -->
+      <div class="video-testimonials">
+        <div class="video-slot">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="15" height="14" rx="2"/><path d="m17 10 5-3v10l-5-3"/></svg>
+          <span>Vídeo testimonio 1</span>
+          <p>Pendiente de subir</p>
+        </div>
+        <div class="video-slot">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="15" height="14" rx="2"/><path d="m17 10 5-3v10l-5-3"/></svg>
+          <span>Vídeo testimonio 2</span>
+          <p>Pendiente de subir</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="contact">
-    <div class="container">
-      <p class="eyebrow">Empecemos</p>
-      <h2>¿Hablamos de tu nudo?</h2>
-      <p class="section-lead">
-        Cuéntame un poco de tu situación por WhatsApp o email y te
-        responderé personalmente para encontrar el primer hueco.
-      </p>
-      <div class="contact-links">
-        <a class="btn btn-whatsapp" href="https://wa.me/34650570487?text=Hola%20Carmen%2C%20quiero%20reservar%20una%20sesi%C3%B3n%201%3A1" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-.9-.3-.1-.5-.2-.7.1-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-2-1.8-2.3-.2-.3 0-.5.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5C9.4 9 8.9 7.7 8.7 7.2c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2.1 3.2 5 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.3-.6-.4z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.4 5.1L2 22l5.1-1.3C8.5 21.5 10.2 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.2.8.8-3.1-.2-.3C4 14.7 3.5 13.4 3.5 12c0-4.7 3.8-8.5 8.5-8.5s8.5 3.8 8.5 8.5-3.8 8.5-8.5 8.5z"/></svg>
-          +34 650 57 04 87
-        </a>
+  <section class="contact" id="contacto">
+    <div class="container-wide contact-grid">
+      <div class="contact-info">
+        <p class="eyebrow">Cuéntame tu caso</p>
+        <h2>¿Hablamos de tu nudo?</h2>
+        <p class="section-lead">
+          Cuéntame un poco de tu situación y te responderé personalmente
+          para encontrar el primer hueco para tu sesión gratuita. Si lo
+          prefieres, escríbeme directo por WhatsApp.
+        </p>
+        <ul class="contact-links">
+          <li>
+            <a href="https://wa.me/34650570487?text=Hola%20Carmen%2C%20quiero%20reservar%20mi%20sesi%C3%B3n%20gratuita%20de%20descubrimiento" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-.9-.3-.1-.5-.2-.7.1-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-2-1.8-2.3-.2-.3 0-.5.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5C9.4 9 8.9 7.7 8.7 7.2c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2.1 3.2 5 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.3-.6-.4z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.4 5.1L2 22l5.1-1.3C8.5 21.5 10.2 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.2.8.8-3.1-.2-.3C4 14.7 3.5 13.4 3.5 12c0-4.7 3.8-8.5 8.5-8.5s8.5 3.8 8.5 8.5-3.8 8.5-8.5 8.5z"/></svg>
+              +34 650 57 04 87
+            </a>
+          </li>
+          <li>
+            <a href="mailto:corensanz@gmail.com">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+              corensanz@gmail.com
+            </a>
+          </li>
+        </ul>
       </div>
-      <p class="contact-email">o escribe a <a href="mailto:corensanz@gmail.com">corensanz@gmail.com</a></p>
+
+      <!--
+        PENDIENTE: Carmen mencionó un campo adicional para el formulario
+        ("algún dato más que te daré") que aún no me ha confirmado. He
+        añadido "¿Cómo has llegado hasta aquí?" como campo provisional
+        (útil para saber qué canal de la campaña de Meta funciona mejor).
+        Sustituir por el campo real en cuanto lo confirme.
+      -->
+      <form class="contact-form" id="contact-form" novalidate>
+        <div class="form-row">
+          <label for="name">Nombre</label>
+          <input type="text" id="name" name="name" required placeholder="Tu nombre">
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required placeholder="tu@email.com">
+        </div>
+        <div class="form-row">
+          <label for="phone">Teléfono (opcional)</label>
+          <input type="tel" id="phone" name="phone" placeholder="+34 600 000 000">
+        </div>
+        <div class="form-row">
+          <label for="reason">Motivo de la consulta</label>
+          <textarea id="reason" name="reason" rows="4" required placeholder="Cuéntame brevemente qué te trae por aquí y qué te gustaría conseguir"></textarea>
+        </div>
+        <div class="form-row">
+          <label for="source">¿Cómo has llegado hasta aquí? <span style="font-weight:400;text-transform:none;letter-spacing:0;">(provisional)</span></label>
+          <select id="source" name="source">
+            <option value="Instagram o Facebook">Instagram o Facebook</option>
+            <option value="Google">Google</option>
+            <option value="Recomendación de alguien">Recomendación de alguien</option>
+            <option value="Otro">Otro</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Enviar por WhatsApp</button>
+        <p class="form-note" id="form-note">Al enviar, se abrirá WhatsApp con tu mensaje ya redactado para que solo tengas que confirmarlo.</p>
+      </form>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="container">
+      <p class="eyebrow eyebrow-light">Tú decides</p>
+      <h2>Puedes reservar tu sesión gratuita ahora, o seguir cargando con esto tú sola.</h2>
+      <a class="btn btn-primary" href="https://wa.me/34650570487?text=Hola%20Carmen%2C%20quiero%20reservar%20mi%20sesi%C3%B3n%20gratuita%20de%20descubrimiento" target="_blank" rel="noopener">Reservar mi sesión gratuita</a>
     </div>
   </section>
 
@@ -497,5 +842,48 @@ footer a:hover{ color: var(--color-sabiduria); }
     <p>Carmen Orensanz · Liberadora de Nudos — <a href="index.html">ver todos los servicios</a></p>
   </div>
 </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var WHATSAPP_NUMBER = '34650570487';
+  var form = document.getElementById('contact-form');
+  var note = document.getElementById('form-note');
+
+  if (form) {
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      var name = form.name.value.trim();
+      var email = form.email.value.trim();
+      var phone = form.phone.value.trim();
+      var reason = form.reason.value.trim();
+      var source = form.source.value;
+
+      if (!name || !email || !reason) {
+        note.textContent = 'Por favor, completa tu nombre, tu email y el motivo de la consulta.';
+        note.style.color = '#b04a4a';
+        return;
+      }
+
+      var lines = [
+        'Hola Carmen, soy ' + name + '.',
+        'Email: ' + email
+      ];
+      if (phone) lines.push('Teléfono: ' + phone);
+      lines.push('Motivo de la consulta: ' + reason);
+      lines.push('Cómo ha llegado hasta aquí: ' + source);
+
+      var text = encodeURIComponent(lines.join('\n'));
+      var url = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + text;
+
+      window.open(url, '_blank', 'noopener');
+
+      note.textContent = 'Abriendo WhatsApp con tu mensaje redactado. ¡Solo tienes que confirmarlo!';
+      note.style.color = '';
+      form.reset();
+    });
+  }
+});
+</script>
 </body>
 </html>
