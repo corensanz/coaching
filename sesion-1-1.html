@@ -228,38 +228,48 @@ p{ margin: 0 0 16px; color: var(--color-ink-soft); }
 .btn-ghost-light:hover{ background: rgba(250,247,241,0.12); }
 .btn-full{ width: 100%; justify-content: center; }
 
-/* ---- identifica (3 nudos) ---- */
-.identify{ padding: 64px 0; }
+/* ---- identifica (mapa de la ansiedad) ---- */
+.identify{ padding: 64px 0; background: var(--color-cream-dark); }
 .identify .section-lead{ max-width: 60ch; margin-bottom: 40px; }
-.identify-grid{
+.identify-categories{
   display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
 }
-.identify-card{
+.identify-category{
   background: var(--color-white);
-  border: 1px solid var(--color-cream-dark);
   border-radius: 18px;
-  padding: 30px 26px;
+  padding: 32px 30px;
 }
-.identify-check{
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: var(--color-cream-dark);
+.identify-category h3{
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
   color: var(--color-libertad);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
-.identify-card p{ font-size: 0.96rem; margin: 0; }
-.identify-card strong{ color: var(--color-ink); font-weight: 700; }
-@media (max-width: 820px){
-  .identify-grid{ grid-template-columns: 1fr; }
+.identify-items{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  flex-direction:column;
+  gap: 16px;
+}
+.identify-items li{
+  display:flex;
+  gap: 12px;
+  align-items:flex-start;
+}
+.identify-items svg{ flex:none; margin-top: 3px; color: var(--color-sabiduria); }
+.identify-items p{ margin:0; font-size: 0.95rem; color: var(--color-ink-soft); }
+.identify-items strong{ color: var(--color-ink); font-weight: 700; }
+@media (max-width: 760px){
+  .identify-categories{ grid-template-columns: 1fr; }
 }
 
-/* ---- dark nudo section ---- */
+/* ---- dark section: validar la ansiedad ---- */
 .dark-section{
   background: var(--color-dark);
   color: var(--color-dark-soft);
@@ -555,13 +565,13 @@ footer a:hover{ color: var(--color-sabiduria); }
     <div class="container-wide hero-grid">
       <div class="hero-inner">
       <p class="eyebrow">Coaching individual · Ansiedad y carga mental</p>
-      <h1>Llevas tantos nudos en la cabeza<br>que ya ni <span class="script">notas el peso.</span></h1>
+      <h1>Ansiedad y carga mental:<br><span class="script">la sensación de no parar nunca.</span></h1>
       <p class="hero-lead">
         Rumias lo mismo durante horas, te acuestas cansada y te levantas
         igual, y dices que sí a todo aunque por dentro estés pidiendo un
-        descanso. Eso tiene nombre: carga mental. En una sesión gratuita de
+        descanso. Eso también es ansiedad. En una sesión gratuita de
         45–60 minutos la ponemos sobre la mesa y te llevas una primera
-        herramienta para empezar a soltarla.
+        herramienta para empezar a gestionarla.
       </p>
       <div class="hero-actions">
         <a class="btn btn-whatsapp" href="https://wa.me/34650570487?text=Hola%20Carmen%2C%20quiero%20reservar%20mi%20sesi%C3%B3n%20gratuita%20de%20descubrimiento" target="_blank" rel="noopener">
@@ -580,29 +590,64 @@ footer a:hover{ color: var(--color-sabiduria); }
   <section class="identify" id="identifica">
     <div class="container-wide">
       <p class="eyebrow">Empieza por aquí</p>
-      <h2>¿Te reconoces en alguno de estos tres nudos?</h2>
-      <p class="section-lead">No hace falta que te identifiques con los tres. Con uno solo ya es momento de empezar a mirarlo.</p>
-      <div class="identify-grid">
-        <div class="identify-card">
-          <span class="identify-check">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-          </span>
-          <h3>Tu cabeza no para</h3>
-          <p>Le das mil vueltas al mismo problema sin encontrar la salida y, encima, te machacas por no estar rindiendo lo suficiente. <strong>La autocrítica se ha vuelto feroz</strong> y el diálogo interno, agotador.</p>
+      <h2>¿Te reconoces en algo de esto?</h2>
+      <p class="section-lead">Así es como se nota la ansiedad y la carga mental en el día a día. No hace falta que marques todas las casillas — con una sola ya es momento de mirarlo.</p>
+      <div class="identify-categories">
+        <div class="identify-category">
+          <h3>En la mente</h3>
+          <ul class="identify-items">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              <p><strong>Rumiación constante:</strong> le das mil vueltas al mismo problema durante horas sin llegar a ninguna solución.</p>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              <p><strong>Autocrítica feroz:</strong> sientes que no eres lo bastante buena en el trabajo, en la pareja o en la familia.</p>
+            </li>
+          </ul>
         </div>
-        <div class="identify-card">
-          <span class="identify-check">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-          </span>
-          <h3>Vives con la agenda mental siempre abierta</h3>
-          <p>Se te olvidan cosas, te cuesta desconectar hasta los fines de semana, y notas que <strong>el tiempo nunca te alcanza</strong>, por mucho que corras.</p>
+        <div class="identify-category">
+          <h3>En el cuerpo</h3>
+          <ul class="identify-items">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              <p><strong>Agotamiento crónico:</strong> te despiertas cansada aunque hayas dormido tus horas.</p>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              <p><strong>Tensión y tirantez:</strong> cuello, hombros y mandíbula apretados sin darte ni cuenta.</p>
+            </li>
+          </ul>
         </div>
-        <div class="identify-card">
-          <span class="identify-check">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-          </span>
-          <h3>Dices que sí aunque por dentro digas que no</h3>
-          <p>Evitas el conflicto a toda costa, cargas con lo de los demás para que nadie se moleste, y <strong>siempre acabas la última en tu propia lista.</strong></p>
+        <div class="identify-category">
+          <h3>En el día a día</h3>
+          <ul class="identify-items">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              <p><strong>Niebla mental:</strong> se te olvidan las llaves, una cita, o pierdes el hilo a media frase.</p>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              <p><strong>Dificultad para desconectar:</strong> ni los findes ni las vacaciones consiguen que la cabeza pare.</p>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              <p><strong>Urgencia constante:</strong> la sensación de que el tiempo nunca te alcanza, hagas lo que hagas.</p>
+            </li>
+          </ul>
+        </div>
+        <div class="identify-category">
+          <h3>En tus relaciones</h3>
+          <ul class="identify-items">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              <p><strong>Miedo a defraudar:</strong> dices que sí a todo para no generar conflicto, y te dejas para el final.</p>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              <p><strong>Irritabilidad:</strong> saltas con quien menos se lo merece porque ya no te queda paciencia.</p>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -611,20 +656,20 @@ footer a:hover{ color: var(--color-sabiduria); }
   <section class="dark-section">
     <div class="container-wide dark-grid">
       <div>
-        <p class="eyebrow eyebrow-light">Sobre la carga mental</p>
-        <h2>La carga mental también es un nudo. Y los nudos se pueden deshacer.</h2>
+        <p class="eyebrow eyebrow-light">No estás exagerando</p>
+        <h2>Esto no es que seas débil. Es ansiedad — y la ansiedad se puede gestionar.</h2>
         <p>
-          No es que seas débil ni que "no sepas organizarte". Es que llevas
-          demasiado tiempo siendo tú quien sostiene, recuerda y anticipa
-          todo, para todos — y a ti, ¿quién te sostiene?
+          No es que "no sepas organizarte" ni que tengas que aguantar más.
+          Es que llevas demasiado tiempo siendo tú quien sostiene, recuerda
+          y anticipa todo, para todos — y a ti, ¿quién te sostiene?
         </p>
         <p>
-          El primer paso no es hacer más. Es parar un momento y mirar de
-          qué está hecho ese nudo.
+          El primer paso no es hacer más. Es pararte un momento y mirar de
+          qué está hecha esa ansiedad.
         </p>
       </div>
       <div class="dark-photo">
-        <img src="images/carmen-hero.jpg" alt="Carmen Orensanz deshaciendo un nudo con las manos">
+        <img src="images/carmen-hero.jpg" alt="Carmen Orensanz">
       </div>
     </div>
   </section>
@@ -683,7 +728,7 @@ footer a:hover{ color: var(--color-sabiduria); }
           <span class="fact-label">Ritmo</span>
           <p class="fact-value">
             Nada de paquetes cerrados.
-            <span class="fact-note">Decidimos juntas la frecuencia y la duración del proceso según lo que estés atravesando — cada nudo lleva su tiempo.</span>
+            <span class="fact-note">Decidimos juntas la frecuencia y la duración del proceso según lo que estés atravesando — cada proceso lleva su tiempo.</span>
           </p>
         </div>
       </div>
@@ -700,7 +745,7 @@ footer a:hover{ color: var(--color-sabiduria); }
       <h2>Qué pasa en esa primera llamada</h2>
       <p class="lead">
         Nos conectamos y empezamos por donde tú estés: una frase suelta,
-        un nudo en el estómago, algo que llevas meses sin decir en voz
+        un peso en el pecho, algo que llevas meses sin decir en voz
         alta. No traigo un cuestionario clínico ni un diagnóstico. Traigo
         preguntas que van al hueso, silencio cuando hace falta, y un
         ejercicio práctico para poner forma a lo que sientes.
@@ -766,7 +811,7 @@ footer a:hover{ color: var(--color-sabiduria); }
     <div class="container-wide contact-grid">
       <div class="contact-info">
         <p class="eyebrow">Cuéntame tu caso</p>
-        <h2>¿Hablamos de tu nudo?</h2>
+        <h2>¿Hablamos de tu ansiedad?</h2>
         <p class="section-lead">
           Cuéntame un poco de tu situación y te responderé personalmente
           para encontrar el primer hueco para tu sesión gratuita. Si lo
