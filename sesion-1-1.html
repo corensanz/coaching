@@ -253,8 +253,10 @@ p{ margin: 0 0 16px; color: var(--color-ink-soft); }
   font-size: 0.9rem !important;
   color: var(--color-libertad) !important;
 }
+.pains-item:last-child{ grid-column: 2; }
 @media (max-width: 900px){
   .pains-list{ grid-template-columns: repeat(2, 1fr); }
+  .pains-item:last-child{ grid-column: auto; }
 }
 @media (max-width: 560px){
   .pains-list{ grid-template-columns: 1fr; }
@@ -488,10 +490,11 @@ footer a:hover{ color: var(--color-sabiduria); }
       <p class="eyebrow">Coaching individual · Ansiedad y carga mental</p>
       <h1>Ansiedad y carga mental:<br><span class="script">la sensación de no parar nunca.</span></h1>
       <p class="hero-lead">
-        Rumias lo mismo durante horas, te acuestas cansada y te levantas
-        igual, y dices que sí a todo aunque por dentro estés pidiendo un
-        descanso que nunca llega. Eso también es ansiedad — aunque no se
-        parezca en nada a lo que imaginabas.
+        Rumias lo mismo durante horas, se te olvidan las cosas más tontas,
+        y sientes que el día nunca te alcanza. Te acuestas cansada, te
+        levantas igual, y dices que sí a todo con tal de no fallarle a
+        nadie — aunque por dentro estés pidiendo un respiro que no llega.
+        Eso también es ansiedad.
       </p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#formulario">
@@ -514,28 +517,32 @@ footer a:hover{ color: var(--color-sabiduria); }
       <p class="section-lead">Así es como se nota la ansiedad y la carga mental en el día a día. No hace falta que te veas reflejada en todo — con una sola frase ya es momento de mirarlo.</p>
       <div class="pains-list">
         <div class="pains-item">
-          <p>Te acuestas dándole vueltas al mismo problema y te levantas igual de cansada — como si <strong>la cabeza no se hubiera apagado</strong> en toda la noche.</p>
-          <p class="pains-quote">«Qué cansada estoy» — y el día todavía no ha empezado.</p>
-        </div>
-        <div class="pains-item">
-          <p>Te machacas por no llegar a todo: en el trabajo, con tu familia, contigo. <strong>La autocrítica</strong> no te da tregua.</p>
-          <p class="pains-quote">«Podría haberlo hecho mejor» — pase lo que pase.</p>
-        </div>
-        <div class="pains-item">
-          <p><strong>Se te olvidan las llaves, una cita</strong>, el hilo de lo que ibas a decir — la cabeza va más rápido de lo que puedes seguirle.</p>
-          <p class="pains-quote">«¿Dónde narices las he dejado... otra vez?»</p>
-        </div>
-        <div class="pains-item">
-          <p>No consigues desconectar ni el fin de semana. <strong>La cabeza sigue ahí</strong>, aunque el cuerpo ya no esté trabajando.</p>
-          <p class="pains-quote">«Un segundo y lo miro» — y son las doce de la noche.</p>
-        </div>
-        <div class="pains-item">
-          <p>Dices que sí aunque por dentro digas que no, para no generar ni un conflicto más. Y <strong>te dejas para el final</strong>.</p>
+          <p>Dices que sí a todo con tal de <strong>no liarla con nadie</strong>, y luego te quedas tú sin hueco.</p>
           <p class="pains-quote">«Sí, no pasa nada» — mientras por dentro piensas todo lo contrario.</p>
         </div>
         <div class="pains-item">
-          <p><strong>Sientes que el tiempo nunca te alcanza</strong>, hagas lo que hagas.</p>
+          <p>Vas todo el día corriendo y aun así <strong>sientes que no llegas</strong> a nada.</p>
           <p class="pains-quote">«Es que no llego a nada» — otra vez.</p>
+        </div>
+        <div class="pains-item">
+          <p>Eres la que se acuerda de todo — cumpleaños, citas, lo que falta en la nevera — <strong>menos de ti misma</strong>.</p>
+          <p class="pains-quote">«¿Dónde narices las he dejado... otra vez?»</p>
+        </div>
+        <div class="pains-item">
+          <p>Ni el finde desconectas. <strong>La cabeza sigue gestionando</strong>, aunque se supone que estás descansando.</p>
+          <p class="pains-quote">«Un segundo y lo miro» — y son las doce de la noche.</p>
+        </div>
+        <div class="pains-item">
+          <p>Te levantas cansada aunque hayas dormido tus horas, <strong>como si el sueño no sirviera de nada</strong>.</p>
+          <p class="pains-quote">«Qué cansada estoy» — y el día todavía no ha empezado.</p>
+        </div>
+        <div class="pains-item">
+          <p>Sientes que nunca llegas lo bastante bien — <strong>ni como madre, ni en pareja, ni en el curro</strong>.</p>
+          <p class="pains-quote">«Podría haberlo hecho mejor» — pase lo que pase.</p>
+        </div>
+        <div class="pains-item">
+          <p>Le das mil vueltas a si lo estás haciendo bien con tus hijos, <strong>aunque en el fondo sepas que sí</strong>.</p>
+          <p class="pains-quote">«¿Lo estaré haciendo bien?» — la pregunta de fondo, todo el día.</p>
         </div>
       </div>
     </div>
@@ -646,6 +653,46 @@ footer a:hover{ color: var(--color-sabiduria); }
           <span class="testimonial-mark">&ldquo;</span>
           <p>Mi proceso con Carmen ha sido un antes y un después. Fui trabajando todas esas creencias hasta eliminarlas, y ahora ya no hay nada que me detenga. Es una persona muy cercana que transmite confianza desde el minuto uno.</p>
           <cite class="testimonial-author">— Manuela V.</cite>
+        </blockquote>
+        <blockquote class="testimonial-card">
+          <span class="testimonial-mark">&ldquo;</span>
+          <p>Le diría que haga el proceso sin miedo, aunque sea lo primero que le venga a la mente. Sirve para conocerte más a ti misma y ver cosas internas que no sabías que estaban ahí. Con sus preguntas, encuentras respuestas que nunca te habías planteado.</p>
+          <cite class="testimonial-author">— Ana</cite>
+        </blockquote>
+        <blockquote class="testimonial-card">
+          <span class="testimonial-mark">&ldquo;</span>
+          <p>Trabajar con Carmen es poner orden, y desde tu interior buscar la respuesta que necesitas. La cercanía que sientes te invita al desahogo y comprensión absoluta. A día de hoy sus palabras y tareas siguen ayudándome.</p>
+          <cite class="testimonial-author">— Saray</cite>
+        </blockquote>
+        <blockquote class="testimonial-card">
+          <span class="testimonial-mark">&ldquo;</span>
+          <p>Da un poco de vértigo, sí, pero es un camino de profundo autoconocimiento: cambiar patrones, soltar lo que ya no sirve, entender de dónde vienen tus miedos. El camino no siempre es agradable, pero es totalmente transformador.</p>
+          <cite class="testimonial-author">— Sabrina</cite>
+        </blockquote>
+        <blockquote class="testimonial-card">
+          <span class="testimonial-mark">&ldquo;</span>
+          <p>Me pareció una persona real, natural y con conocimiento. Te hace darte cuenta por ti misma de los sentimientos que llevas dentro y no sabes cómo sacarlos. Ha sido fantástico y reconfortante.</p>
+          <cite class="testimonial-author">— Marta B.</cite>
+        </blockquote>
+        <blockquote class="testimonial-card">
+          <span class="testimonial-mark">&ldquo;</span>
+          <p>Me he quedado muy tranquila después de todas las conversaciones que hemos tenido. Me ha hecho pensar en muchas cosas que tenía escondidas. El miedo no se va de un día para otro, pero ahora lo veo de forma más realista.</p>
+          <cite class="testimonial-author">— L. Usón</cite>
+        </blockquote>
+        <blockquote class="testimonial-card">
+          <span class="testimonial-mark">&ldquo;</span>
+          <p>La mente es la herramienta más poderosa, y hay que aprender a que nos sirva para encontrar nuestra mejor versión. Aprendí a decidir por lo que yo quiero, y no por lo que mi alrededor me pauta.</p>
+          <cite class="testimonial-author">— Ana H.</cite>
+        </blockquote>
+        <blockquote class="testimonial-card">
+          <span class="testimonial-mark">&ldquo;</span>
+          <p>Es una lucha casi constante — crear hábitos nuevos y romper esquemas tan arraigados no es fácil, ni rápido, ni inmediato. Pero se nota. Hay que querer, y ser constante.</p>
+          <cite class="testimonial-author">— @denisaciocmujer</cite>
+        </blockquote>
+        <blockquote class="testimonial-card">
+          <span class="testimonial-mark">&ldquo;</span>
+          <p>El proceso con Carmen me ha ayudado a tener claro hacia dónde quiero ir, a abandonar las creencias que me limitaban y a confiar más en mí misma. Ahora me siento mucho más tranquila y preparada.</p>
+          <cite class="testimonial-author">— Sara</cite>
         </blockquote>
       </div>
 
