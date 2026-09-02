@@ -245,14 +245,6 @@ p{ margin: 0 0 16px; color: var(--color-ink-soft); }
 }
 .pains-item p{ margin:0; font-size: 1.05rem; line-height: 1.5; color: var(--color-ink); }
 .pains-item strong{ color: var(--color-sabiduria); font-weight: 700; }
-.pains-quote{
-  margin-top: 14px !important;
-  padding-top: 14px;
-  border-top: 1px solid var(--color-cream-dark);
-  font-style: italic;
-  font-size: 0.9rem !important;
-  color: var(--color-libertad) !important;
-}
 .pains-item:last-child{ grid-column: 2; }
 @media (max-width: 900px){
   .pains-list{ grid-template-columns: repeat(2, 1fr); }
@@ -337,16 +329,47 @@ p{ margin: 0 0 16px; color: var(--color-ink-soft); }
 }
 .testimonials h2{ margin-bottom: 8px; }
 .testimonials .section-lead{ margin-bottom: 36px; }
-.testimonials-grid{
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+.testimonials-carousel{
+  display:flex;
+  align-items:center;
+  gap: 12px;
 }
+.testimonials-track{
+  display:flex;
+  gap: 24px;
+  overflow-x:auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  flex: 1;
+  padding: 4px 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.testimonials-track::-webkit-scrollbar{ display:none; }
+.carousel-arrow{
+  flex:none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-ink-soft);
+  background: var(--color-white);
+  color: var(--color-ink);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition: background .15s ease, color .15s ease, border-color .15s ease;
+}
+.carousel-arrow:hover{ background: var(--color-sabiduria); color: var(--color-white); border-color: var(--color-sabiduria); }
 .testimonial-card{
   background: var(--color-white);
   border-radius: 16px;
   padding: 28px 26px;
   margin: 0;
+  flex: 0 0 calc((100% - 48px) / 3);
+  scroll-snap-align: start;
 }
 .testimonial-mark{
   font-family: var(--font-script);
@@ -367,8 +390,12 @@ p{ margin: 0 0 16px; color: var(--color-ink-soft); }
   font-size: 0.85rem;
   color: var(--color-ink-soft);
 }
-@media (max-width: 760px){
-  .testimonials-grid{ grid-template-columns: 1fr; }
+@media (max-width: 900px){
+  .testimonial-card{ flex-basis: calc((100% - 24px) / 2); }
+}
+@media (max-width: 620px){
+  .testimonial-card{ flex-basis: 88%; }
+  .carousel-arrow{ width: 38px; height: 38px; font-size: 1.2rem; }
 }
 
 .video-testimonials{
@@ -518,31 +545,24 @@ footer a:hover{ color: var(--color-sabiduria); }
       <div class="pains-list">
         <div class="pains-item">
           <p>Dices que sí a todo con tal de <strong>no liarla con nadie</strong>, y luego te quedas tú sin hueco.</p>
-          <p class="pains-quote">«Sí, no pasa nada» — mientras por dentro piensas todo lo contrario.</p>
         </div>
         <div class="pains-item">
           <p>Vas todo el día corriendo y aun así <strong>sientes que no llegas</strong> a nada.</p>
-          <p class="pains-quote">«Es que no llego a nada» — otra vez.</p>
         </div>
         <div class="pains-item">
           <p>Eres la que se acuerda de todo — cumpleaños, citas, lo que falta en la nevera — <strong>menos de ti misma</strong>.</p>
-          <p class="pains-quote">«¿Dónde narices las he dejado... otra vez?»</p>
         </div>
         <div class="pains-item">
           <p>Ni el finde desconectas. <strong>La cabeza sigue gestionando</strong>, aunque se supone que estás descansando.</p>
-          <p class="pains-quote">«Un segundo y lo miro» — y son las doce de la noche.</p>
         </div>
         <div class="pains-item">
           <p>Te levantas cansada aunque hayas dormido tus horas, <strong>como si el sueño no sirviera de nada</strong>.</p>
-          <p class="pains-quote">«Qué cansada estoy» — y el día todavía no ha empezado.</p>
         </div>
         <div class="pains-item">
           <p>Sientes que nunca llegas lo bastante bien — <strong>ni como madre, ni en pareja, ni en el curro</strong>.</p>
-          <p class="pains-quote">«Podría haberlo hecho mejor» — pase lo que pase.</p>
         </div>
         <div class="pains-item">
           <p>Le das mil vueltas a si lo estás haciendo bien con tus hijos, <strong>aunque en el fondo sepas que sí</strong>.</p>
-          <p class="pains-quote">«¿Lo estaré haciendo bien?» — la pregunta de fondo, todo el día.</p>
         </div>
       </div>
     </div>
@@ -638,7 +658,9 @@ footer a:hover{ color: var(--color-sabiduria); }
     <div class="container-wide">
       <p class="eyebrow">Lo que dicen</p>
       <h2 class="section-lead">De quienes ya se sentaron aquí</h2>
-      <div class="testimonials-grid">
+      <div class="testimonials-carousel">
+        <button class="carousel-arrow carousel-prev" aria-label="Testimonios anteriores">‹</button>
+        <div class="testimonials-track">
         <blockquote class="testimonial-card">
           <span class="testimonial-mark">&ldquo;</span>
           <p>Vivía en bucle constante, miles de cosas en mi cabeza sin resolver, dudas, frenos... Sentía como un saco pesado lleno de piedras. Con Carmen fuimos sacando, indagando en ese saco, mirando cada piedra, para desde ahí reencontrarme.</p>
@@ -694,6 +716,8 @@ footer a:hover{ color: var(--color-sabiduria); }
           <p>El proceso con Carmen me ha ayudado a tener claro hacia dónde quiero ir, a abandonar las creencias que me limitaban y a confiar más en mí misma. Ahora me siento mucho más tranquila y preparada.</p>
           <cite class="testimonial-author">— Sara</cite>
         </blockquote>
+        </div>
+        <button class="carousel-arrow carousel-next" aria-label="Más testimonios">›</button>
       </div>
 
       <div class="video-testimonials">
@@ -767,5 +791,20 @@ footer a:hover{ color: var(--color-sabiduria); }
   </div>
 </footer>
 
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var track = document.querySelector('.testimonials-track');
+  var prevBtn = document.querySelector('.carousel-prev');
+  var nextBtn = document.querySelector('.carousel-next');
+  if (track && prevBtn && nextBtn) {
+    prevBtn.addEventListener('click', function () {
+      track.scrollBy({ left: -track.clientWidth, behavior: 'smooth' });
+    });
+    nextBtn.addEventListener('click', function () {
+      track.scrollBy({ left: track.clientWidth, behavior: 'smooth' });
+    });
+  }
+});
+</script>
 </body>
 </html>
