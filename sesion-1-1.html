@@ -230,43 +230,24 @@ p{ margin: 0 0 16px; color: var(--color-ink-soft); }
 
 /* ---- identifica (mapa de la ansiedad) ---- */
 .identify{ padding: 64px 0; background: var(--color-cream-dark); }
-.identify .section-lead{ max-width: 60ch; margin-bottom: 40px; }
-.identify-categories{
-  display:grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
+.identify .section-lead{ max-width: 60ch; margin-bottom: 8px; }
+.pains-list{
+  max-width: 68ch;
+  margin-top: 32px;
 }
-.identify-category{
-  background: var(--color-white);
-  border-radius: 18px;
-  padding: 32px 30px;
+.pains-item{
+  margin: 0;
+  padding: 26px 0;
+  border-top: 1px solid rgba(42,39,24,0.14);
+  font-size: 1.15rem;
+  line-height: 1.55;
+  color: var(--color-ink);
 }
-.identify-category h3{
-  font-size: 0.82rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-weight: 700;
-  color: var(--color-libertad);
-  margin-bottom: 20px;
+.pains-list .pains-item:last-child{
+  border-bottom: 1px solid rgba(42,39,24,0.14);
 }
-.identify-items{
-  list-style:none;
-  margin:0;
-  padding:0;
-  display:flex;
-  flex-direction:column;
-  gap: 16px;
-}
-.identify-items li{
-  display:flex;
-  gap: 12px;
-  align-items:flex-start;
-}
-.identify-items svg{ flex:none; margin-top: 3px; color: var(--color-sabiduria); }
-.identify-items p{ margin:0; font-size: 0.95rem; color: var(--color-ink-soft); }
-.identify-items strong{ color: var(--color-ink); font-weight: 700; }
-@media (max-width: 760px){
-  .identify-categories{ grid-template-columns: 1fr; }
+@media (max-width: 640px){
+  .pains-item{ font-size: 1.05rem; padding: 20px 0; }
 }
 
 /* ---- dark section: validar la ansiedad ---- */
@@ -550,64 +531,13 @@ footer a:hover{ color: var(--color-sabiduria); }
     <div class="container-wide">
       <p class="eyebrow">Empieza por aquí</p>
       <h2>¿Te reconoces en algo de esto?</h2>
-      <p class="section-lead">Así es como se nota la ansiedad y la carga mental en el día a día. No hace falta que marques todas las casillas — con una sola ya es momento de mirarlo.</p>
-      <div class="identify-categories">
-        <div class="identify-category">
-          <h3>En la mente</h3>
-          <ul class="identify-items">
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-              <p><strong>Rumiación constante:</strong> le das mil vueltas al mismo problema durante horas sin llegar a ninguna solución.</p>
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-              <p><strong>Autocrítica feroz:</strong> sientes que no eres lo bastante buena en el trabajo, en la pareja o en la familia.</p>
-            </li>
-          </ul>
-        </div>
-        <div class="identify-category">
-          <h3>En el cuerpo</h3>
-          <ul class="identify-items">
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-              <p><strong>Agotamiento crónico:</strong> te despiertas cansada aunque hayas dormido tus horas.</p>
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-              <p><strong>Tensión y tirantez:</strong> cuello, hombros y mandíbula apretados sin darte ni cuenta.</p>
-            </li>
-          </ul>
-        </div>
-        <div class="identify-category">
-          <h3>En el día a día</h3>
-          <ul class="identify-items">
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-              <p><strong>Niebla mental:</strong> se te olvidan las llaves, una cita, o pierdes el hilo a media frase.</p>
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-              <p><strong>Dificultad para desconectar:</strong> ni los findes ni las vacaciones consiguen que la cabeza pare.</p>
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-              <p><strong>Urgencia constante:</strong> la sensación de que el tiempo nunca te alcanza, hagas lo que hagas.</p>
-            </li>
-          </ul>
-        </div>
-        <div class="identify-category">
-          <h3>En tus relaciones</h3>
-          <ul class="identify-items">
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-              <p><strong>Miedo a defraudar:</strong> dices que sí a todo para no generar conflicto, y te dejas para el final.</p>
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-              <p><strong>Irritabilidad:</strong> saltas con quien menos se lo merece porque ya no te queda paciencia.</p>
-            </li>
-          </ul>
-        </div>
+      <p class="section-lead">Así es como se nota la ansiedad y la carga mental en el día a día. No hace falta que te veas reflejada en todo — con una sola frase ya es momento de mirarlo.</p>
+      <div class="pains-list">
+        <p class="pains-item">Te acuestas dándole vueltas al mismo problema y te levantas igual de cansada — como si la cabeza no se hubiera apagado en toda la noche.</p>
+        <p class="pains-item">Te machacas por no llegar a todo: en el trabajo, con tu familia, contigo. Y encima se te olvidan las llaves, una cita, el hilo de lo que ibas a decir.</p>
+        <p class="pains-item">No consigues desconectar ni el fin de semana. El cuello, los hombros, la mandíbula — todo apretado, y ni te habías dado cuenta.</p>
+        <p class="pains-item">Dices que sí aunque por dentro estés diciendo que no, para no generar ni un conflicto más. Y luego saltas con quien menos se lo merece, porque ya no te queda paciencia.</p>
+        <p class="pains-item">Sientes que el tiempo nunca te alcanza, hagas lo que hagas.</p>
       </div>
     </div>
   </section>
