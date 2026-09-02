@@ -57,12 +57,7 @@ h3 { font-size: 1.3rem; }
 p { margin: 0 0 16px; color: var(--color-ink-soft); }
 
 .script {
-  font-family: var(--font-script);
-  font-style: italic;
-  font-weight: 500;
   color: var(--color-sabiduria);
-  font-size: 1.25em;
-  line-height: 1;
 }
 
 .eyebrow {
@@ -389,8 +384,11 @@ p { margin: 0 0 16px; color: var(--color-ink-soft); }
 }
 
 .reflect-script {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 500;
   margin: 40px 0 0;
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 
 /* Pillars */
